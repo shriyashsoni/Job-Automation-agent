@@ -1,0 +1,7 @@
+playwright
+python-docx
+pdfplumber
+google-generativeai
+groq
+pyyaml
+python-dotenv

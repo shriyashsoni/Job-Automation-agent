@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-automation-agent"
+version = "1.0.0"
+authors = [
+  { name="Shriyash Soni", email="sonishriyash@gmail.com" },
+]
+description = "An advanced AI-powered autonomous employment application system."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "playwright",
+    "python-docx",
+    "pdfplumber",
+    "google-generativeai",
+    "groq",
+    "pyyaml",
+    "python-dotenv",
+    "openpyxl",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/shriyashsoni/Job-Automation-agent"
+"Bug Tracker" = "https://github.com/shriyashsoni/Job-Automation-agent/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

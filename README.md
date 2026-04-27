@@ -97,6 +97,48 @@ cp .env.example .env
 
 ---
 
+## ⚡ Quick Start (Copy & Paste)
+Run these commands in your terminal to get started immediately:
+
+```bash
+# 1. Clone and Enter
+git clone https://github.com/shriyashsoni/Job-Automation-agent.git && cd Job-Automation-agent
+
+# 2. Install Package & Dependencies
+pip install -e .
+playwright install chromium
+
+# 3. Setup Environment
+cp .env.example .env
+
+# 4. Launch Agent
+python src/main.py --auto-submit --headless
+```
+
+---
+
+## 🧰 SDK Usage
+You can integrate the Job Automation Agent into your own Python scripts:
+
+```python
+from src import AIAgent, JobSearcher, BrowserManager
+
+# Initialize components
+ai = AIAgent(provider="gemini")
+bm = BrowserManager(headless=True)
+searcher = JobSearcher(bm)
+
+# Example: Custom Search
+async def custom_flow():
+    jobs = await searcher.search_web3_career("Solidity Developer")
+    print(f"Found {len(jobs)} jobs")
+
+import asyncio
+asyncio.run(custom_flow())
+```
+
+---
+
 ## 👨‍💻 Credits
 Developed and Maintained by **Shriyash Soni**.
 
